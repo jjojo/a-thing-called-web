@@ -1,0 +1,58 @@
+body {
+    /*  Sets the background color for the entire body tag */
+    background-color: orange;
+    /*  font-family tells the browser which text fonts to use, 
+        if first font isn't available we use the next */
+    font-family: Helvetica, sans-serif, Arial;
+    /*  color decides the text-color. */
+    color: white;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    /*  font-size sets the size of the font. 
+        rem is a flexible unit that scales based on the root page size.
+        "This means that 1rem equals the font size of the html element 
+        (which for most browsers has a default value of 16px)."
+        [source]: https://www.sitepoint.com/understanding-and-using-rem-units-in-css/ */
+    font-size: 3rem;
+    /*  font-weight tells how thick the font shall be (different fonts 
+        have different values available ranging from 100-900). This time we 
+        set it to "lighter" to get the thinest font available. */
+    font-weight: lighter;
+    /* text-align: center; adjusts the text to be centered */
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+tic-tac-toe-board {
+    /* border: 5px solid white; creates a 5 pixel thick border around the <tic-tac-toe-board> tag. */
+    border: 5px solid white;
+    /* display: flex; means we are using the flexbox model. This could be a tutorial in itself, you can checkout
+       https://www.w3schools.com/css/css3_flexbox.asp#flex-flow to learn more. */
+    display: flex;
+    flex-wrap: wrap;
+    /* height and with are self explanatory. However the vw unit might not be. vw stands for view width and is the
+       percentage of the views with. Here we use it to make the bord squared. Scince not many screens are squared we
+       use the vw on the hight as well. (We could also have used vh [view height] as long as they are the same) */
+    height: 30vw;
+    width: 30vw;
+}
+
+div {
+    /* box-sizing: border-box; sets the box-sizing, take a quick look here: https://css-tricks.com/box-sizing/
+       Tl;dr you should use border-box. */
+    box-sizing: border-box;
+    /* calc() is a css-function that does math for us. This is very usefull, always up your game with math if you can! */
+    width: calc(100% / 3);
+    height: calc(100% / 3);
+    /* Gives us borders around the 9 divs we created as spots to place Os and Xs. */
+    border: 5px solid white;
+}

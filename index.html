@@ -1,0 +1,50 @@
+<!--  The HTML lang attribute can be used to declare the language of a Web page or a 
+      portion of a Web page. This is meant to assist search engines and browsers. -->
+<html lang="en">
+<!-- The <head> tag container is used for meta data (data about data). This section is
+    global and is usually where you specify the title of your webpage, style, charsets,
+    scaling, base hrefs and link to other files or libraries. -->
+<head>
+    <!--  charset="UTF-8" means we use utf-8 encoding on our characters. -->
+    <meta charset="UTF-8">
+    <!--  * name="viewport"     Is used to make the web page responsive. 
+                                This is a new feature with HTML5.
+          * width=device-width  Sets the width of the page to the same as the 
+                                screen-width of the device (mobile, tablet, computer, etc).
+          * initial-scale=1.0   Sets the initial zoom level when the page is first loaded 
+                                (1.0 is very much standard) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link> tags are used to link to external files, in this case we link to a seperate stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- The <title> tag sets the title of the webpage (shown in browser tab) -->
+    <title>Tic Tac Toe!</title>
+</head>
+
+<!-- <body>, This is where all the content of the webpage goes. -->
+<body>
+    <!-- The <h1>...<h6> tags are used as headings. -->
+    <h1>Tic Tac Toe!</h1>
+    <!-- The <p> stands for paragraph and is used most commonly for text. -->
+    <p>Let us play some tic tac toe!</p>
+
+    <!-- HTML5 allows us to come up with our own tags as well, let us try that!
+         We will use the <tic-tac-toe-board> to wrap the board. -->
+    <tic-tac-toe-board>
+        <!-- For the tic tac toe board we need 9 places to place our Os and Xs.
+            We are going to use <div> tags for this. <div> tags are very common 
+            and used for division or sections in HTML. They are often used as 
+            containers for other tags, css and javaScript functions.-->
+        <div></div> <!-- 1 -->
+        <div></div> <!-- 2 -->
+        <div></div> <!-- 3 -->
+        <div></div> <!-- 4 -->
+        <div></div> <!-- 5 -->
+        <div></div> <!-- 6 -->
+        <div></div> <!-- 7 -->
+        <div></div> <!-- 8 -->
+        <div></div> <!-- 9 -->
+    </tic-tac-toe-board>
+</body>
+</html>
