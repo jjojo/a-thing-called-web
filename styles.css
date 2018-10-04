@@ -47,12 +47,19 @@ tic-tac-toe-board {
 }
 
 div {
+    /* Gives us borders around the 9 divs we created as spots to place Os and Xs. */
+    border: 5px solid white;
     /* box-sizing: border-box; sets the box-sizing, take a quick look here: https://css-tricks.com/box-sizing/
        Tl;dr you should use border-box. */
     box-sizing: border-box;
+    /* Here we use the flexbox model toghether with align-items: center; which centers the content vertically 
+       and justify-content: center; which center it horizontally. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7rem;
     /* calc() is a css-function that does math for us. This is very usefull, always up your game with math if you can! */
-    width: calc(100% / 3);
     height: calc(100% / 3);
-    /* Gives us borders around the 9 divs we created as spots to place Os and Xs. */
-    border: 5px solid white;
+    width: calc(100% / 3);
+    
 }
