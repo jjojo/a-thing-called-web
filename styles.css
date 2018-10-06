@@ -27,6 +27,10 @@ h1 {
     text-align: center;
 }
 
+button {
+    padding: 2rem;
+}
+
 p {
     text-align: center;
     font-size: 1rem;

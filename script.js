@@ -60,6 +60,11 @@ var state = {
     } 
 */
 
+function startGame() {
+    let message = document.getElementById('game-message')
+    message.innerHTML = "Game is on!"
+}
+
 /*  Arrow function alternative. When written on one line without {} the return is included.
     const getCurrentPlayer = () => state.currentPlayer  */
 function getCurrentPlayer() {

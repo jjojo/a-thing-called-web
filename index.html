@@ -29,8 +29,12 @@
 
     <!-- The <h1>...<h6> tags are used as headings. -->
     <h1>Tic Tac Toe!</h1>
-    <!-- The <p> stands for paragraph and is used most commonly for text. -->
-    <p>Let us play some tic tac toe!</p>
+
+    <button onclick="startGame()">START</button>
+    <!-- The <p> stands for paragraph and is used most commonly for text. 
+         The id= is called a tag attribute and is used as a reference to the element.
+         We can then use it to change the element with JavaScript or CSS. -->
+    <p id="game-message">Let us play some tic tac toe!</p>
 
     <!-- HTML5 allows us to come up with our own tags as well, let us try that!
          We will use the <tic-tac-toe-board> to wrap the board. -->
@@ -40,7 +44,6 @@
             and used for division or sections in HTML. They are often used as 
             containers for other tags, css and javaScript functions.
         
-            The id= is called an attribute and is used as a reference to the div-element.
             The onclick= is an event listener, when a click event occurrs on the div we 
             call the JavaScript function named placeMark(clickedElementId, row, col).
                 * this.id is the elements id, we pass this as a parameter to the function.
