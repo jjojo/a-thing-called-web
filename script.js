@@ -22,7 +22,10 @@ var oCharacter = '&#9711'
     null is an other new thing here, it is a data type for basically nothing. null is just null, like zero is just zero. */
 
 var state = {
-    // currentPlayer will keep track of who's turn it is.
+    //  players: ['player1', 'player2'] holds the two players, for now lets call them player1 and player2
+    players: ['player1', 'player2'],
+    //  currentPlayer will keep track of who's turn it is.
+    gameInProgress: false,
     currentPlayer: null,
     /*  board will keep track of the figures placed on the bord. 
         We will do this by using an array with three arrays in it.
@@ -60,21 +63,31 @@ var state = {
     } 
 */
 
-function startGame() {
-    let message = document.getElementById('game-message')
-    message.innerHTML = "Game is on!"
+//  updateMessage( message ) is used to update the <p id="game-message"></p> tag with new messages.
+function updateMessage( message ) {
+    document.getElementById('game-message').innerHTML = message
 }
 
-/*  Arrow function alternative. When written on one line without {} the return is included.
-    const getCurrentPlayer = () => state.currentPlayer  */
-function getCurrentPlayer() {
-    return state.currentPlayer
+function startGame() {
+    state.gameInProgress = true
+    state.currentPlayer = 'player1'
+    updateMessage('Game started, player 1\'s turn')
 }
 
 function placeMark( clickedElementId, row, col ) {
     const square = document.getElementById(clickedElementId)
-    square.innerHTML = xCharacter
-    state.board[row][col] = 'X'
+
+    if ( state.currentPlayer === 'player1' && state.gameInProgress) {
+        square.innerHTML = xCharacter
+        state.board[row][col] = 'X'
+        state.currentPlayer = 'player2'
+        updateMessage('Player 2\'s turn')
+    } else if ( state.currentPlayer === 'player2' && state.gameInProgress ) {
+        square.innerHTML = oCharacter
+        state.board[row][col] = 'O'
+        state.currentPlayer = 'player1'
+        updateMessage('Player 1\'s turn') 
+    }
     
     // debug: logs the board state to the console so we can inspect it
     console.log('Debug : state : board : ', state.board)
